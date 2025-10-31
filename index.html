@@ -218,22 +218,23 @@
             box-shadow: var(--shadow);
         }
         
-        .profile-img-placeholder {
+        .profile-img-container {
             width: 180px;
             height: 180px;
             border-radius: 50%;
-            background: linear-gradient(135deg, var(--primary-dark), var(--secondary));
             margin: 0 auto 25px;
             display: flex;
             align-items: center;
             justify-content: center;
             border: 5px solid rgba(255, 255, 255, 0.2);
             overflow: hidden;
+            background: #f5f7fa;
         }
         
-        .profile-img-placeholder i {
-            font-size: 80px;
-            color: rgba(255, 255, 255, 0.8);
+        .profile-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
         
         .profile-info {
@@ -516,6 +517,21 @@
             gap: 5px;
         }
         
+        .edu-status {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin-top: 10px;
+        }
+        
+        .edu-status.active {
+            background: #e6fffa;
+            color: #234e52;
+            border: 1px solid #81e6d9;
+        }
+        
         .certifications-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -583,6 +599,25 @@
             font-size: 0.95rem;
             color: var(--gray);
             line-height: 1.7;
+        }
+        
+        .cert-link {
+            display: inline-block;
+            margin-top: 15px;
+            color: var(--secondary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            font-size: 0.9rem;
+        }
+        
+        .cert-link:hover {
+            color: var(--accent);
+            text-decoration: underline;
+        }
+        
+        .cert-link i {
+            margin-right: 5px;
         }
         
         .skills-container {
@@ -782,15 +817,15 @@
                     <p class="hero-subtitle">15+ anos de experiência em virtualização, redes e testes de invasão éticos</p>
                     
                     <div class="hero-btns">
-                        <a href="#resume" class="btn btn-primary">Ver Currículo</a>
+                        <a href="curriculo-victor.pdf" class="btn btn-primary" download>Baixar Currículo Completo</a>
                         <a href="#contact" class="btn btn-secondary">Entrar em Contato</a>
                     </div>
                 </div>
                 
                 <div class="hero-image">
                     <div class="profile-card">
-                        <div class="profile-img-placeholder">
-                            <i class="fas fa-user-shield"></i>
+                        <div class="profile-img-container">
+                            <img src="foto.jpeg" alt="Foto de Victor J Fonseca" class="profile-img">
                         </div>
                         <div class="profile-info">
                             <div class="profile-name">Victor J Fonseca da Silva</div>
@@ -835,7 +870,7 @@
                         <h3>Resumo Profissional</h3>
                     </div>
                     <div class="summary">
-                        Profissional de TI com <span class="highlight">15+ anos de experiência</span> em infraestrutura, suporte técnico e redes de computadores. Especializado em virtualização VMware, administração de servidores Windows/Linux e segurança cibernética. Atualmente expandindo expertise em pentest ético e SIEM com Wazuh. Reconhecido pela capacidade de fornecer soluções eficazes e pelo compromisso com atualização contínua nas tecnologias de infraestrutura e segurança. Dominando tecnologias como VMware vSphere, Ethical Hacking, Wazuh SIEM/XDR e integração de IA em testes de segurança.
+                        Profissional de TI com <span class="highlight">15+ anos de experiência</span> em infraestrutura, suporte técnico e redes de computadores. Especializado em virtualização VMware, administração de servidores Windows/Linux e segurança cibernética. Atualmente cursando <span class="highlight">Tecnologia em Segurança da Informação</span> na Universidade Anhembi Morumbi (previsão de conclusão: 1º semestre de 2026) e expandindo expertise em pentest ético e SIEM com Wazuh. Reconhecido pela capacidade de fornecer soluções eficazes e pelo compromisso com atualização contínua nas tecnologias de infraestrutura e segurança. Dominando tecnologias como VMware vSphere, Ethical Hacking, Wazuh SIEM/XDR e integração de IA em testes de segurança.
                     </div>
                 </section>
                 
@@ -857,11 +892,11 @@
                             <div class="experience-description">
                                 <ul>
                                     <li>Virtualização de servidores utilizando VMware ESXi 6.0 e VMware vSphere</li>
-                                    <li>Montagem e manutenção de servidores Windows Server 2008, 2008 R2 e 2016</li>
+                                    <li>Montagem e manutenção de servidores Windows Server 2008, 2008 R2, 2016 e 2019</li>
                                     <li>Implantação e manutenção do Microsoft TS Web Access</li>
                                     <li>Implantação e manutenção de servidor de Antivírus e Firewall Symantec Endpoint</li>
                                     <li>Implantação e manutenção de servidores de arquivos, AD e GPOs utilizando Windows e Linux</li>
-                                    <li>Experiência em sistemas LINUX Debian, Ubuntu e openSUSE como servidores DHCP, DNS e Samba</li>
+                                    <li>Experiência em sistemas Linux Ubuntu Server, openSUSE e Rocky Linux como servidores Web, Dhcp, Dns e Samba</li>
                                     <li>Administração de redes com MikroTik para gerenciamento de links, firewall, MPLS e VPN</li>
                                     <li>Monitoramento com Zabbix e Grafana, inventários com OCS Inventory</li>
                                     <li>Suporte técnico para usuários com Windows, Office e sistemas da linha Phoenix Contmatic e Sage Folhamatic</li>
@@ -968,6 +1003,17 @@
                     
                     <div class="education-grid">
                         <div class="education-card">
+                            <div class="edu-title">Tecnologia em Segurança da Informação</div>
+                            <div class="edu-meta">
+                                <span><i class="fas fa-university"></i> Universidade Anhembi Morumbi</span>
+                                <span><i class="fas fa-clock"></i> Previsão: 1º semestre 2026</span>
+                                <span><i class="fas fa-book"></i> Graduação - EAD</span>
+                            </div>
+                            <p>Curso Superior de Tecnologia em Segurança da Informação com foco em proteção de dados, segurança de redes, ethical hacking e gestão de riscos.</p>
+                            <span class="edu-status active">Cursando</span>
+                        </div>
+                        
+                        <div class="education-card">
                             <div class="edu-title">Técnico em Informática</div>
                             <div class="edu-meta">
                                 <span><i class="fas fa-university"></i> SENAC Guaratinguetá</span>
@@ -996,6 +1042,9 @@
                             <div class="cert-description">
                                 Construção de cluster com múltiplos hosts ESXi, integração com Windows Server 2016 (AD/DNS), configuração de storage iSCSI (HP StoreVirtual), gestão de templates de VMs e políticas de failover (FT/HA).
                             </div>
+                            <a href="vmware-vsphere-6.5.jpg" class="cert-link" target="_blank">
+                                <i class="fas fa-external-link-alt"></i> Ver Certificado
+                            </a>
                         </div>
                         
                         <div class="certification-card">
@@ -1008,6 +1057,9 @@
                             <div class="cert-description">
                                 Implementação de clusters com alta disponibilidade (HA/DRS), Virtual Distributed Switch (VDS), operações de vMotion/Storage vMotion, Lifecycle Manager e integração com Kubernetes via Tanzu.
                             </div>
+                            <a href="vmware-vsphere-7.jpg" class="cert-link" target="_blank">
+                                <i class="fas fa-external-link-alt"></i> Ver Certificado
+                            </a>
                         </div>
                         
                         <div class="certification-card">
@@ -1032,6 +1084,9 @@
                             <div class="cert-description">
                                 Scanning e enumeração com Nmap, exploração de vulnerabilidades com Metasploit, ataques client-side e web hacking (XSS/SQLi), técnicas de pós-exploração e hardening de sistemas.
                             </div>
+                            <a href="formacao-hacker.jpg" class="cert-link" target="_blank">
+                                <i class="fas fa-external-link-alt"></i> Ver Certificado
+                            </a>
                         </div>
                         
                         <div class="certification-card">
@@ -1044,6 +1099,9 @@
                             <div class="cert-description">
                                 Técnicas OSINT, Google Hacking, metodologias CTF, uso avançado do Kali Linux, identificação de vetores de ataque e fundamentos de segurança ofensiva.
                             </div>
+                            <a href="fundamentos-ethical-hacking.jpg" class="cert-link" target="_blank">
+                                <i class="fas fa-external-link-alt"></i> Ver Certificado
+                            </a>
                         </div>
                         
                         <div class="certification-card">
@@ -1056,6 +1114,9 @@
                             <div class="cert-description">
                                 Implementação de servidores e agents, detecção de malware com integração Sysmon, threat hunting baseado em MITRE ATT&CK, monitoramento de vulnerabilidades e automação de resposta a incidentes.
                             </div>
+                            <a href="wazuh-siem.jpg" class="cert-link" target="_blank">
+                                <i class="fas fa-external-link-alt"></i> Ver Certificado
+                            </a>
                         </div>
                         
                         <div class="certification-card">
@@ -1068,6 +1129,9 @@
                             <div class="cert-description">
                                 Integração de LLMs em fluxos de pentest, automação de varreduras com ShellGPT, desenvolvimento de scripts de exploração assistida por IA, configuração de agentes autônomos.
                             </div>
+                            <a href="pentest-ia.jpg" class="cert-link" target="_blank">
+                                <i class="fas fa-external-link-alt"></i> Ver Certificado
+                            </a>
                         </div>
                     </div>
                 </section>
