@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Victor J. Fonseca | Especialista em TI</title>
+    <title>Victor J. Fonseca | Analista de Infraestrutura</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <style>
@@ -210,7 +210,7 @@
         .profile-card {
             background: rgba(255, 255, 255, 0.1);
             border-radius: 20px;
-            padding: 30px;
+            padding: 20px;
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.1);
             max-width: 400px;
@@ -249,10 +249,13 @@
         }
         
         .profile-title {
-            font-size: 1.1rem;
+            font-size: 0.8rem;
             color: var(--accent);
             margin-bottom: 20px;
             font-weight: 500;
+            white-space: nowrap;
+            overflow-x: auto;
+            text-overflow: clip;
         }
         
         .contact-info {
@@ -669,7 +672,6 @@
         
         .skill-name {
             font-weight: 500;
-            display: block;
         }
         
         footer {
@@ -826,7 +828,7 @@
                         </div>
                         <div class="profile-info">
                             <div class="profile-name">Victor J Fonseca da Silva</div>
-                            <div class="profile-title">Especialista em TI e Segurança</div>
+                            <div class="profile-title">Analista de Infraestrutura | SysAdmin | Virtualização & Backup</div>
                             
                             <div class="contact-info">
                                 <div class="contact-item">
@@ -1164,11 +1166,10 @@
                     </div>
                     
                     <div class="skills-container">
-                        <!-- Infraestrutura & Virtualização (reorganizada e enxuta) -->
                         <div class="skill-category">
                             <h3>Infraestrutura & Virtualização</h3>
                             <ul class="skill-list">
-                                <li><span class="skill-name">VMware vSphere/ESXi (inclui ghettoVCB para backup de VMs)</span></li>
+                                <li><span class="skill-name">VMware vSphere/ESXi + ghettoVCB (backup de VMs)</span></li>
                                 <li><span class="skill-name">Servidores Windows e Linux (AD, DNS, DHCP, File Server, GPOs)</span></li>
                                 <li><span class="skill-name">GNS3 / VirtualBox</span></li>
                                 <li><span class="skill-name">Armazenamento: TrueNAS, OpenMediaVault (OMV 7) + UrBackup</span></li>
@@ -1176,18 +1177,17 @@
                             </ul>
                         </div>
                         
-                        <!-- Segurança Cibernética (sem níveis) -->
                         <div class="skill-category">
                             <h3>Segurança Cibernética</h3>
                             <ul class="skill-list">
                                 <li><span class="skill-name">Wazuh SIEM/XDR</span></li>
-                                <li><span class="skill-name">Pentest Ético (Kali, Metasploit, Nmap, Hydra)</span></li>
-                                <li><span class="skill-name">OWASP ZAP / SQL Injection (estudo)</span></li>
-                                <li><span class="skill-name">Pentest com IA (LLMs, ShellGPT)</span></li>
+                                <li><span class="skill-name">Pentest Ético (Kali, Metasploit, Nmap, Hydra, OWASP ZAP)</span></li>
+                                <li><span class="skill-name">Symantec Endpoint Protection</span></li>
+                                <li><span class="skill-name">Firewall e Hardening</span></li>
+                                <li><span class="skill-name">Pentest com IA</span></li>
                             </ul>
                         </div>
                         
-                        <!-- Redes & Monitoramento (renovada e mais robusta) -->
                         <div class="skill-category">
                             <h3>Redes & Monitoramento</h3>
                             <ul class="skill-list">
@@ -1196,7 +1196,6 @@
                                 <li><span class="skill-name">Zabbix + Grafana Dashboards</span></li>
                                 <li><span class="skill-name">GLPI (Help Desk/ITSM/Inventário)</span></li>
                                 <li><span class="skill-name">OCS Inventory</span></li>
-                                <li><span class="skill-name">Symantec Endpoint Protection</span></li>
                                 <li><span class="skill-name">DHCP/DNS Server (Linux/MikroTik)</span></li>
                                 <li><span class="skill-name">Gerenciamento de Links e Banda</span></li>
                                 <li><span class="skill-name">Análise de desempenho em redes Wi-Fi (canais, interferência, throughput)</span></li>
@@ -1239,18 +1238,15 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Smooth scrolling for navigation links
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
                     e.preventDefault();
-                    
                     document.querySelector(this.getAttribute('href')).scrollIntoView({
                         behavior: 'smooth'
                     });
                 });
             });
             
-            // Header scroll effect
             window.addEventListener('scroll', function() {
                 const header = document.querySelector('header');
                 if (window.scrollY > 50) {
