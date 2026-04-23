@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Victor J. Fonseca | Especialista em TI e Segurança</title>
+    <title>Victor J. Fonseca | Especialista em TI</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <style>
@@ -621,11 +621,11 @@
         }
         
         .new-course {
-            border-top: 3px solid #38b2ac; /* Cor diferente para cursos novos */
+            border-top: 3px solid #38b2ac;
         }
         
         .new-course .cert-category {
-            color: #38b2ac; /* Cor da categoria para cursos novos */
+            color: #38b2ac;
         }
         
         .skills-container {
@@ -660,8 +660,6 @@
         
         .skill-list li {
             padding: 12px 0;
-            display: flex;
-            justify-content: space-between;
             border-bottom: 1px dashed var(--light-gray);
         }
         
@@ -671,16 +669,7 @@
         
         .skill-name {
             font-weight: 500;
-        }
-        
-        .skill-level {
-            font-size: 0.85rem;
-            color: var(--white);
-            background: var(--success);
-            padding: 3px 10px;
-            border-radius: 20px;
-            min-width: 90px;
-            text-align: center;
+            display: block;
         }
         
         footer {
@@ -821,8 +810,8 @@
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text">
-                    <h1 class="hero-title">Especialista em <span>Infraestrutura de TI</span> e Segurança Cibernética</h1>
-                    <p class="hero-subtitle">15+ anos de experiência em virtualização, redes e testes de invasão éticos</p>
+                    <h1 class="hero-title">Especialista em <span>Infraestrutura de TI</span></h1>
+                    <p class="hero-subtitle">Profissional com 15+ anos de experiência.</p>
                     
                     <div class="hero-btns">
                         <a href="curriculo-victor.pdf" class="btn btn-primary" download>Baixar Currículo Completo</a>
@@ -1175,93 +1164,42 @@
                     </div>
                     
                     <div class="skills-container">
+                        <!-- Infraestrutura & Virtualização (reorganizada e enxuta) -->
                         <div class="skill-category">
                             <h3>Infraestrutura & Virtualização</h3>
                             <ul class="skill-list">
-                                <li>
-                                    <span class="skill-name">VMware vSphere/ESXi</span>
-                                    <span class="skill-level">Avançado</span>
-                                </li>
-                                <li>
-                                    <span class="skill-name">Windows Server</span>
-                                    <span class="skill-level">Avançado</span>
-                                </li>
-                                <li>
-                                    <span class="skill-name">Active Directory & GPO</span>
-                                    <span class="skill-level">Avançado</span>
-                                </li>
-                                <li>
-                                    <span class="skill-name">Linux Server</span>
-                                    <span class="skill-level">Intermediário</span>
-                                </li>
-                                <li>
-                                    <span class="skill-name">GNS3/VirtualBox</span>
-                                    <span class="skill-level">Avançado</span>
-                                </li>
-                                <li>
-                                    <span class="skill-name">TrueNAS/Samba4</span>
-                                    <span class="skill-level">Intermediário</span>
-                                </li>
+                                <li><span class="skill-name">VMware vSphere/ESXi (inclui ghettoVCB para backup de VMs)</span></li>
+                                <li><span class="skill-name">Servidores Windows e Linux (AD, DNS, DHCP, File Server, GPOs)</span></li>
+                                <li><span class="skill-name">GNS3 / VirtualBox</span></li>
+                                <li><span class="skill-name">Armazenamento: TrueNAS, OpenMediaVault (OMV 7) + UrBackup</span></li>
+                                <li><span class="skill-name">Hardware (manutenção de desktops, servidores, notebooks)</span></li>
                             </ul>
                         </div>
                         
+                        <!-- Segurança Cibernética (sem níveis) -->
                         <div class="skill-category">
                             <h3>Segurança Cibernética</h3>
                             <ul class="skill-list">
-                                <li>
-                                    <span class="skill-name">Wazuh SIEM/XDR</span>
-                                    <span class="skill-level">Avançado</span>
-                                </li>
-                                <li>
-                                    <span class="skill-name">Pentest Ético</span>
-                                    <span class="skill-level">Intermediário</span>
-                                </li>
-                                <li>
-                                    <span class="skill-name">Kali Linux</span>
-                                    <span class="skill-level">Intermediário</span>
-                                </li>
-                                <li>
-                                    <span class="skill-name">Metasploit Framework</span>
-                                    <span class="skill-level">Intermediário</span>
-                                </li>
-                                <li>
-                                    <span class="skill-name">Nmap/Wireshark</span>
-                                    <span class="skill-level">Avançado</span>
-                                </li>
-                                <li>
-                                    <span class="skill-name">Pentest com IA</span>
-                                    <span class="skill-level">Intermediário</span>
-                                </li>
+                                <li><span class="skill-name">Wazuh SIEM/XDR</span></li>
+                                <li><span class="skill-name">Pentest Ético (Kali, Metasploit, Nmap, Hydra)</span></li>
+                                <li><span class="skill-name">OWASP ZAP / SQL Injection (estudo)</span></li>
+                                <li><span class="skill-name">Pentest com IA (LLMs, ShellGPT)</span></li>
                             </ul>
                         </div>
                         
+                        <!-- Redes & Monitoramento (renovada e mais robusta) -->
                         <div class="skill-category">
                             <h3>Redes & Monitoramento</h3>
                             <ul class="skill-list">
-                                <li>
-                                    <span class="skill-name">MikroTik</span>
-                                    <span class="skill-level">Avançado</span>
-                                </li>
-                                <li>
-                                    <span class="skill-name">Zabbix/OCS Inventory</span>
-                                    <span class="skill-level">Avançado</span>
-                                </li>
-                                <li>
-                                    <span class="skill-name">Grafana Dashboards</span>
-                                    <span class="skill-level">Intermediário</span>
-                                </li>
-                                <li>
-                                    <span class="skill-name">Bacula Backup</span>
-                                    <span class="skill-level">Intermediário</span>
-                                </li>
-                                <li>
-                                    <span class="skill-name">Symantec Endpoint</span>
-                                    <span class="skill-level">Avançado</span>
-                                </li>
-                                <li>
-                                    <span class="skill-name">VPN/Firewall</span>
-                                    <span class="skill-level">Avançado</span>
-                                </li>
+                                <li><span class="skill-name">MikroTik (Firewall, VPN, DHCP, Queues, Bridges)</span></li>
+                                <li><span class="skill-name">WireGuard VPN (MikroTik/Linux)</span></li>
+                                <li><span class="skill-name">Zabbix + Grafana Dashboards</span></li>
+                                <li><span class="skill-name">GLPI (Help Desk/ITSM/Inventário)</span></li>
+                                <li><span class="skill-name">OCS Inventory</span></li>
+                                <li><span class="skill-name">Symantec Endpoint Protection</span></li>
+                                <li><span class="skill-name">DHCP/DNS Server (Linux/MikroTik)</span></li>
+                                <li><span class="skill-name">Gerenciamento de Links e Banda</span></li>
+                                <li><span class="skill-name">Análise de desempenho em redes Wi-Fi (canais, interferência, throughput)</span></li>
                             </ul>
                         </div>
                     </div>
